@@ -1,0 +1,22 @@
+<h1>Hello world from hello!</h1>
+
+<p>
+<%= 1 + 1 %>
+</p>
+
+<p>
+<% target = "world" %>
+<%= "Hello #{target}"%>
+</p>
+
+<p>
+  <% @array.each do |n| %>
+    <%= n %><br>
+  <% end %>
+</p>
+
+<div>id: <%= @id %></div>
+<div>page: <%= @page %></div>
+<div>next page: <%= @page.to_i + 1 %></div>
+
+<%= link_to "Index link", {:controller => 'demo', :action => 'index'} %>
