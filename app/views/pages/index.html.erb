@@ -11,6 +11,7 @@
 
   <table>
     <tr class="header">
+      <th>Id</th>
       <th>#</th>
       <th>Page</th>
       <th>Subject Id</th>
@@ -21,6 +22,7 @@
     </tr>
     <% @pages.each do |page| %>
     <tr>
+      <td><%= page.id %></td>
       <td><%= page.position %></td>
       <td><%= page.name %></td>
       <td><%= page.subject_id %></td>

@@ -1,0 +1,38 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="sections index">
+  <h2>Sections</h2>
+
+  <%= link_to("Add New Section", new_section_path, :class => 'action new') %>
+
+  <table>
+    <tr class="header">
+      <th>Id</th>
+      <th>#</th>
+      <th>Section</th>
+      <th>Page Id</th>
+      <th>Content Type</th>
+      <th>Visible</th>
+      <th>Actions</th>
+    </tr>
+    <% @sections.each do |section| %>
+    <tr>
+      <td><%= section.id %></td>
+      <td><%= section.position %></td>
+      <td><%= section.name %></td>
+      <td><%= section.page_id %></td>
+      <td class="center"><%= section.content_type %></td>
+      <td class="center"><%= section.visible ? 'Yes' : 'No' %></td>
+      <td class="actions">
+        <%= link_to("Show", section_path(section.id), :class => "action show") %> 
+        <%= link_to("Edit", edit_section_path(section.id), :class => "action edit") %>
+        <%= link_to("Delete", delete_section_path(section.id), :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

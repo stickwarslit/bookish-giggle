@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'my/girlfriend'
+  get 'my/mom'
 
   root 'demo#index'
 
@@ -11,6 +12,12 @@ Rails.application.routes.draw do
   end
 
   resources :pages do
+    member do
+      get :delete
+    end
+  end
+
+  resources :sections do
     member do
       get :delete
     end
