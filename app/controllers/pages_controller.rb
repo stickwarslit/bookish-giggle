@@ -35,7 +35,7 @@ class PagesController < ApplicationController
 
     if @page.save
       flash[:notice] = "You have successfully updated your page"
-      redirect_to('show')
+      redirect_to(page_path)
     else
       render('edit')
     end
