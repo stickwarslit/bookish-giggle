@@ -12,6 +12,7 @@
   <table>
     <tr class="header">
       <th>#</th>
+      <th>Id</th>
       <th>Subject</th>
       <th>Visible</th>
       <th>Pages</th>
@@ -20,6 +21,7 @@
     <% @subjects.each do |subject| %>
     <tr>
       <td><%= subject.position %></td>
+      <td><%= subject.id %></td>
       <td><%= subject.name %></td>
       <td class="center"><%= subject.visible ? 'Yes' : 'No' %></td>
       <td class="center"><%= subject.pages.size %></td>
