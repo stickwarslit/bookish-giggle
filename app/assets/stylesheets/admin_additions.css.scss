@@ -1,0 +1,12 @@
+span.status {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border: 1pt solid black;
+}
+span.status.true { 
+  background: green;
+}
+span.status.false {
+  background: red;
+}
