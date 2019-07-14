@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_04_230203) do
+ActiveRecord::Schema.define(version: 2019_07_14_202406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "fuzzystrmatch"
@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 2019_07_04_230203) do
     t.string "first_name"
     t.string "last_name"
     t.string "email", limit: 100, default: "", null: false
-    t.string "hashed_password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "username"
+    t.string "password_digest"
     t.index ["username"], name: "index_admin_users_on_username"
   end
 
