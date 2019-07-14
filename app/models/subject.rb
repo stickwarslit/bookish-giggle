@@ -8,4 +8,6 @@ class Subject < ApplicationRecord
   scope :sorted, -> { order(:position => :asc) }
   scope :newest_first, -> { order(:created_at => :desc) }
   scope :search, ->(query) { where(["name LIKE ?", "%#{query}%"]) }
+
+  validates_presence_of :name
 end
