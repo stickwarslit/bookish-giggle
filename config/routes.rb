@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
+  root 'demo#index'
+
+  get 'admin', to: 'access#menu'
+
+  get 'access/menu'
+  get 'access/login'
+  post 'access/attempt_login'
+  get 'access/logout'
+
   get 'my/girlfriend'
   get 'my/mom'
-
-  root 'demo#index'
 
   resources :subjects do
     member do
